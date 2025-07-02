@@ -1,6 +1,6 @@
-# 🔺 Triforce Dev Framework 🔺
+# 🔺 Triforce Dev Framework with Marp 🔺
 
-**人間 × Claude Code × Gemini CLI = 開発効率の最大化**
+Marpプレゼンテーション機能を統合した三位一体開発フレームワーク
 
 このリポジトリは、人間、Claude Code、Gemini CLIの三者が協力して開発を進めるための「三位一体開発フレームワーク」のテンプレートです。それぞれの強みを活かし、弱点を補い合うことで、より効率的で質の高い開発を目指します。
 
