@@ -1,12 +1,10 @@
 {
-  "name": "Claude Code & Gemini CLI Dev Container",
-  "version": "1.1.0",
+  "name": "Triforce Dev with Marp",
+  "version": "1.2.0",
   
-  // buildの代わりに直接imageを使用
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
   
-  // 以下は変更なし
-  "postCreateCommand": "npm install -g @anthropic-ai/claude-code @google/gemini-cli && make setup",
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code @google/gemini-cli @marp-team/marp-cli && make setup",
   
   "customizations": {
     "vscode": {
@@ -15,7 +13,8 @@
       },
       "extensions": [
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"  
+        "esbenp.prettier-vscode",
+        "marp-team.marp-vscode"
       ]
     }
   },
