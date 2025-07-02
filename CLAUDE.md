@@ -201,6 +201,55 @@ gemini -p "このエラーの原因と解決方法は？[エラー内容]"
 - ビルド時間: 3分以内
 - Lighthouseスコア: 90以上（Webアプリの場合）
 
+## 📊 Marpプレゼンテーション機能
+
+### 概要
+このプロジェクトではMarpを使用して、Markdownからプレゼンテーションを自動生成できます。
+
+### 利用可能なコマンド
+
+1. **`/project:create-slide`**: シンプルなスライド作成
+   ```bash
+   /project:create-slide "タイトル" "内容"
+   ```
+
+2. **`/project:generate-presentation`**: AI支援での構造化プレゼンテーション生成
+   ```bash
+   /project:generate-presentation "トピック"
+   ```
+
+### スライド作成時の注意事項
+
+- **構造化**: 情報を論理的に整理し、1スライド1メッセージを心がける
+- **視覚的**: 箇条書きや図表を活用し、テキストの詰め込みを避ける
+- **一貫性**: テーマとスタイルを統一する
+
+### 自動スライド生成フロー
+
+1. ユーザーからトピックやコンテンツを受け取る
+2. 必要に応じてGeminiに構成を相談
+3. Marp形式のMarkdownを生成
+4. PDF/HTML/PPTXに変換
+5. 生成物の場所をユーザーに通知
+
+### Marpテーマのカスタマイズ
+
+`slides/themes/`ディレクトリにカスタムテーマを配置可能：
+
+```css
+/* theme: custom */
+@import 'default';
+
+section {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+h1 {
+  color: #63b3ed;
+}
+```
+
 -----
 
 **Remember**: 迷ったらGeminiに聞く。確信が持てないならユーザーに確認。品質は速度に優先する。
