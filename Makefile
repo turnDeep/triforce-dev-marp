@@ -40,3 +40,29 @@ clean:
 	rm -rf dist
 	rm -f *.log
 	npm cache clean --force
+
+# スライド関連
+slide:
+	@read -p "スライドのトピックを入力: " topic; \
+	claude "/project:generate-presentation $$topic"
+
+slide-simple:
+	@read -p "スライドのタイトルを入力: " title; \
+	read -p "スライドの内容を入力: " content; \
+	claude "/project:create-slide \"$$title\" \"$$content\""
+
+slide-serve:
+	@echo "スライドをブラウザでプレビュー..."
+	@latest=$$(ls -t slides/generated/*.html 2>/dev/null | head -1); \
+	if [ -n "$$latest" ]; then \
+		python3 -m http.server 8080 --directory $$(dirname $$latest) & \
+		echo "http://localhost:8080/$$(basename $$latest) でプレビュー可能"; \
+	else \
+		echo "HTMLスライドが見つかりません"; \
+	fi
+
+# ヘルプに追加
+help:
+	@echo "  make slide    - AI支援でプレゼンテーション生成"
+	@echo "  make slide-simple - シンプルなスライド作成"
+	@echo "  make slide-serve  - 最新のスライドをブラウザでプレビュー"
