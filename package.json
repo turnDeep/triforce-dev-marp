@@ -1,7 +1,7 @@
 {
-  "name": "triforce-dev",
-  "version": "1.1.0",
-  "description": "三位一体開発フレームワーク - Human × Claude Code × Gemini CLI",
+  "name": "triforce-dev-marp",
+  "version": "1.0.0",
+  "description": "三位一体開発フレームワーク with Marp - Human × Claude Code × Gemini CLI × Marp"
   "scripts": {
     "dev": "echo 'プロジェクト固有の開発コマンドを設定してください'",
     "build": "echo 'プロジェクト固有のビルドコマンドを設定してください'",
